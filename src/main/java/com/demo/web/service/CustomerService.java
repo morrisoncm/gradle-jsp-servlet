@@ -6,7 +6,9 @@ import com.demo.web.domain.Customer;
 
 public interface CustomerService {
 	
+	List<Customer> getCustomers();	
+	
 	Customer getCustomer(String username, String password);
 	
-	List<Customer> getCustomers();	
+	Customer  registerCustomer(Customer customer);	
 }

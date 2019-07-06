@@ -1,11 +1,15 @@
 package com.demo.web.domain;
 
+import java.time.LocalDateTime;
+
 public class Customer {
 
 	private String firstName;
 	private String lastName;
 	private String username;
 	private String password;
+	private String emailAddress;
+	private LocalDateTime lastLoginTime;
 
 	public Customer(String username, String password) {
 		super();
@@ -13,12 +17,13 @@ public class Customer {
 		this.password = password;
 	}
 	
-	public Customer(String firstName, String lastName, String username, String password) {
+	public Customer(String firstName, String lastName, String username, String password, String emailAddress) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.username = username;
 		this.password = password;
+		this.emailAddress = emailAddress;
 	}
 
 	public String getFirstName() {
@@ -51,6 +56,22 @@ public class Customer {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public LocalDateTime getLastLoginTime() {
+		return lastLoginTime;
+	}
+
+	public void setLastLoginTime(LocalDateTime lastLoginTime) {
+		this.lastLoginTime = lastLoginTime;
 	}
 
 	@Override

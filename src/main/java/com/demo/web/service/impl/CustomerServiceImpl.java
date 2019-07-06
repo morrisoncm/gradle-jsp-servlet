@@ -22,4 +22,10 @@ public class CustomerServiceImpl implements CustomerService {
 	public List<Customer> getCustomers() {
 		return customerDao.getCustomers();
 	}
+
+	@Override
+	public Customer registerCustomer(Customer customer) {
+		customerDao.registerCustomer(customer);
+		return getCustomer(customer.getUsername(), customer.getPassword());
+	}
 }
