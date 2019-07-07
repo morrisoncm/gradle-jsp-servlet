@@ -18,7 +18,6 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	@SuppressWarnings("unchecked")
 	public List<Customer> getCustomers() {
 		return customerDao.getCustomers();
 	}

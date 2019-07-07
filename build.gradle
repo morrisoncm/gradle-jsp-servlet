@@ -8,8 +8,9 @@
 
 plugins {
     // Apply the war plugin to add support for Java Library
+     id 'eclipse'
      id 'war'
-      id 'org.gretty' version '2.2.0'
+     id 'org.gretty' version '2.2.0'
 }
 
 repositories {

@@ -320,7 +320,7 @@ input, select, textarea {
 
 	code {
 		background: rgba(255, 255, 255, 0.025);
-		border-radius: 5px;
+		border-radius: 1px;
 		border: solid 2px rgba(255, 255, 255, 0.125);
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
@@ -3510,7 +3510,7 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper > header {
-		padding: 11em 0 2.25em 0 ;
+		padding: 6em 0 2.25em 0 ;
 	}
 
 		#wrapper > header .inner {
@@ -3964,7 +3964,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer .inner {
-		padding: 5em 0 3em 0 ;
+		padding: 2em 0 3em 0 ;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
