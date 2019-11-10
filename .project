@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>gradlejavaweb</name>
-	<comment>Project gradlejavaweb created by Buildship.</comment>
+	<name>web-javaweb</name>
+	<comment>Project web-javaweb created by Buildship.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
