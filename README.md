@@ -1,4 +1,4 @@
-# gradlejavaweb
+# web-jsp-servlet
 Sample Gradle Java Web with Junit 5
 
 ## Workspace Setup
