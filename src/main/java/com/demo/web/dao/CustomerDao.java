@@ -11,14 +11,14 @@ public class CustomerDao {
 
 	List<Customer> customers;
 
-	public List<Customer> getCustomers() {
-		return customers;
-	}
-
 	public CustomerDao() {
 		super();
-		customers = Arrays.asList(new Customer("John", "Doe", "jdoe", "password",  "jdoe@gmail.com"),
+		customers = Arrays.asList(new Customer("John", "Doe", "jdoe", "password", "jdoe@gmail.com"),
 				new Customer("Jane", "Roe", "jroe", "password", "jroe@outlook.com"));
+	}
+
+	public List<Customer> getCustomers() {
+		return customers;
 	}
 
 	public Customer getCustomer(Customer customer) {
@@ -31,11 +31,11 @@ public class CustomerDao {
 	}
 
 	public void registerCustomer(Customer customer) {
-			for (Customer customerDb : customers) {
-				if (customerDb.getUsername().equalsIgnoreCase(customer.getUsername())) {
-					throw new CustomerFoundException();
-				}
+		for (Customer customerDb : customers) {
+			if (customerDb.getUsername().equalsIgnoreCase(customer.getUsername())) {
+				throw new CustomerFoundException();
 			}
-			customers.add(customer);
+		}
+		customers.add(customer);
 	}
 }

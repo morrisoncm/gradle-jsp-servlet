@@ -16,7 +16,7 @@ public class Customer {
 		this.username = username;
 		this.password = password;
 	}
-	
+
 	public Customer(String firstName, String lastName, String username, String password, String emailAddress) {
 		super();
 		this.firstName = firstName;
@@ -104,12 +104,7 @@ public class Customer {
 			return false;
 		}
 		if (username == null) {
-			if (other.username != null) {
-				return false;
-			}
-		} else if (!username.equals(other.username)) {
-			return false;
-		}
-		return true;
-	}
+            return other.username == null;
+		} else return username.equals(other.username);
+    }
 }

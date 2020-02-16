@@ -12,9 +12,9 @@ import com.demo.web.service.CustomerService;
 import com.demo.web.service.impl.CustomerServiceImpl;
 
 @SuppressWarnings("serial")
-@WebServlet(name = "LoginServlet", urlPatterns = {"login"}, loadOnStartup = 1)
+@WebServlet(name = "LoginServlet", urlPatterns = { "login" }, loadOnStartup = 1)
 public class LoginServlet extends HttpServlet {
-	
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		CustomerService customerService = new CustomerServiceImpl();
-		
+
 		request.setAttribute("customer", customerService.getCustomer(username, password));
 		request.getRequestDispatcher("login.html").forward(request, response);
 	}

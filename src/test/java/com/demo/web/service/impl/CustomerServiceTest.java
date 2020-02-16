@@ -10,23 +10,24 @@ import com.demo.web.service.CustomerService;
 class CustomerServiceTest {
 
 	private CustomerService customerService;
-	
+
 	@Test
 	void testGetCustomer() {
 		customerService = new CustomerServiceImpl();
 		Customer customerCompare = new Customer("jdoe", "password");
 		Assertions.assertEquals(customerCompare, customerService.getCustomer("jdoe", "password"));
-	};
-	
+	}
+
 	@Test
 	void testGetCustomerCustomerNotFoundException() {
 		customerService = new CustomerServiceImpl();
-		Assertions.assertThrows(CustomerNotFoundException.class, () -> customerService.getCustomer("madeupusername", "password"));
+		Assertions.assertThrows(CustomerNotFoundException.class,
+				() -> customerService.getCustomer("madeupusername", "password"));
 	}
 
 	@Test
 	void testGetCustomers() {
 		customerService = new CustomerServiceImpl();
-		Assertions.assertEquals(2, customerService.getCustomers().size());;
+		Assertions.assertEquals(2, customerService.getCustomers().size());
 	}
 }
