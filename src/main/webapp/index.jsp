@@ -6,7 +6,7 @@
 </head>
 <body>
 	<p><%=daystogo.daysToNewYear()%>
-		days to go this year. Learn Gradle now!
+		days to go this year. Learn Gradle, JSP and Servlets now!
 	</p>
 </body>
 </html>
