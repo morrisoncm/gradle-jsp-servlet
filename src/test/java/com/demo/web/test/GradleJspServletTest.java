@@ -8,15 +8,15 @@ import org.junit.jupiter.api.Test;
 import com.demo.web.domain.Greeting;
 
 class GradleJspServletTest {
-	
-	@Test
-	void testGreetingNotNull() {
-		assertNotNull(new Greeting().getMessage());
-	}
-	
-	@Test
-	void testGreetingMessage() {
-		assertNotEquals("", new Greeting().getMessage());
-	}
+
+  @Test
+  void testGreetingNotNull() {
+    assertNotNull(new Greeting().getMessage());
+  }
+
+  @Test
+  void testGreetingMessage() {
+    assertNotEquals("", new Greeting().getMessage());
+  }
 
 }

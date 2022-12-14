@@ -1,7 +1,7 @@
 plugins {
-	id 'eclipse'
-	id 'war'
-	id 'org.gretty' version '4.0.2'
+  id 'eclipse'
+  id 'war'
+  id 'org.gretty' version '4.0.2'
 }
 
 apply plugin: 'org.gretty'
@@ -10,25 +10,28 @@ apply plugin: 'eclipse'
 
 group = 'com.demo.web'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
 
 repositories {
-	mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-	implementation "joda-time:joda-time:2.10.14"
-	implementation "javax.servlet:javax.servlet-api:4.0.1"
+  implementation "joda-time:joda-time:2.10.14"
+  implementation "javax.servlet:javax.servlet-api:4.0.1"
+  compileOnly "org.projectlombok:lombok:1.18.24"
+  annotationProcessor "org.projectlombok:lombok:1.18.24"
 
-	testImplementation "org.junit.jupiter:junit-jupiter-engine:5.8.2"
-	testImplementation "org.hamcrest:hamcrest-library:2.2"
-	testImplementation 'org.mockito:mockito-core:4.6.1'
+  testImplementation "org.projectlombok:lombok:1.18.24"
+  testAnnotationProcessor "org.projectlombok:lombok:1.18.24"
+  testImplementation "org.junit.jupiter:junit-jupiter-engine:5.8.2"
+  testImplementation "org.hamcrest:hamcrest-library:2.2"
+  testImplementation 'org.mockito:mockito-core:4.6.1'
 }
 
 test {
-	useJUnitPlatform()
+  useJUnitPlatform()
 }
 
 war {
-	archiveName 'gradle-jsp-servlet.war'
+  archiveName 'gradle-jsp-servlet.war'
 }
